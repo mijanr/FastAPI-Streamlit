@@ -1,5 +1,11 @@
 
 
+## Streamlit Multi-Page Functionality
+The following links were used to implement the multi-page functionality in streamlit:
+ - https://docs.streamlit.io/get-started/tutorials/create-a-multipage-app
+ - https://docs.streamlit.io/library/advanced-features/multipage-apps
+
+
 ## Run Streamlit App
 To run the streamlit app, run the following command:
 
