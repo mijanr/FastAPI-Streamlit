@@ -8,7 +8,7 @@ import matplotlib.pyplot as plt
 import requests
 
 # get the head data from fastapi endpoint /iris
-url = "http://localhost:8000/iris"
+url = "http://127.0.0.1:8000/iris"
 r = requests.get(url)
 df = pd.DataFrame(r.json())
 

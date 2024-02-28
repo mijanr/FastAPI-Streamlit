@@ -8,10 +8,10 @@ import matplotlib.pyplot as plt
 import io
 import requests
 
-# get the head data from fastapi endpoint /iris
-url = "http://localhost:8000/iris"
-r = requests.get(url)
-df = pd.DataFrame(r.json())
+# get the data from the /iris endpoint
+response = requests.get("http://127.0.0.1:8000/iris")
+data = response.json()
+df = pd.DataFrame(data)
 
 # Display options
 display_options = st.sidebar.selectbox("Display Options", ["Head", "Tail"])
