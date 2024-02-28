@@ -21,6 +21,11 @@ Once the FastAPI app is running, run the following command to run the streamlit 
 streamlit run app/Home.py
 ```
 
+## Classification Results
+The classification results are displayed in the streamlit app in a separate page and look like the following:
+
+![Classification Results](images/iris_data_classification_result.png)
+
 ## Requirements
 requirements.yml file contains the list of all the packages required to run the code in this repository. requirements.yml is generated using the following command:
 
