@@ -1,9 +1,13 @@
 from fastapi import FastAPI
-import seaborn as sns
+import pandas as pd
 
 app = FastAPI()
 
 @app.get("/iris")
-def get_iris_data():
-    iris = sns.load_dataset("iris")
-    return iris
+def get_iris_dataset():
+    
+    # load the iris dataset
+    iris = pd.read_csv('data/iris.csv')
+    
+    return iris.to_dict(orient="records")
+
