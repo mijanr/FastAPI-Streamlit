@@ -7,10 +7,14 @@ The following links were used to implement the multi-page functionality in strea
 
 
 ## Run Streamlit App
-To run the streamlit app, run the following command:
+To run the streamlit app, first FastAPI app should be running. To run the FastAPI app, run the following command:
 
 ```
-streamlit run src/app.py
+uvicorn main:app --reload
+```
+Once the FastAPI app is running, run the following command to run the streamlit app:
+```
+streamlit run app/Home.py
 ```
 
 ## Requirements
