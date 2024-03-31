@@ -1,8 +1,8 @@
-# FastAPI and Streamlit App for Iris dataset EDA and Classification
+# FastAPI-Streamlit: Interactive web-app - EDA and classification model integration
 
 This repository contains a comprehensive project that performs Exploratory Data Analysis (EDA) and classification tasks on the Iris dataset. The project utilizes FastAPI for creating a robust API endpoints, and Streamlit for building an interactive web application.
 
-The goal of this project is to provide a hands-on approach to understanding data analysis and machine learning workflows, while demonstrating the use of FastAPI and Streamlit in a practical context.
+The goal of this project is to provide a hands-on approach to understanding data analysis and machine learning workflows while demonstrating the use of FastAPI and Streamlit in a practical context.
 
 ## Streamlit Multi-Page Functionality
 The following links were used to implement the multi-page functionality in streamlit:
@@ -22,7 +22,7 @@ streamlit run app/Home.py
 ```
 
 ## Classification Results
-The classification results are displayed in the streamlit app in a separate page and look like the following:
+The classification results are displayed in the streamlit app on a separate page and look like the following:
 
 ![Classification Results](images/iris_data_classification_result.png)
 
