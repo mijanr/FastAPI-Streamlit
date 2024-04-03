@@ -21,6 +21,12 @@ Once the FastAPI app is running, run the following command to run the streamlit 
 streamlit run app/Home.py
 ```
 
+OR, you can run the app using `make` command:
+```
+make run_app
+```
+It will run both FastAPI and Streamlit apps, and open the streamlit app in the browser. 
+
 ## Classification Results
 The classification results are displayed in the streamlit app on a separate page and look like the following:
 
