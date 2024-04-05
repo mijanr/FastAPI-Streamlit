@@ -27,6 +27,11 @@ make run_app
 ```
 It will run both FastAPI and Streamlit apps, and open the streamlit app in the browser. 
 
+## Cloud Deployment
+This `streamlit` app is deployed on `streamlit` cloud. You can access the deployed app using the following link:
+
+[Streamlit App](https://streamlifastapi.streamlit.app/)
+
 ## Classification Results
 The classification results are displayed in the streamlit app on a separate page and look like the following:
 
