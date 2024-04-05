@@ -3,10 +3,7 @@ Show the raw dataset
 """
 import streamlit as st
 import pandas as pd
-import seaborn as sns
-import matplotlib.pyplot as plt
 import io
-import requests
 import git
 
 basePath = git.Repo('.', search_parent_directories=True).working_tree_dir
