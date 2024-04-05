@@ -6,6 +6,11 @@ import matplotlib.pyplot as plt
 from sklearn.decomposition import PCA
 from sklearn.datasets import load_iris
 import requests
+import joblib
+import git
+
+basePath = git.Repo('.', search_parent_directories=True).working_tree_dir
+modelPath = basePath + "/saved_model/saved_model.joblib"
 
 def load_data():
     iris = load_iris()
@@ -33,18 +38,22 @@ def app():
         "petal_width": petal_width
     }
 
-    # interact with FastAPI endpoint
-    response = requests.post("http://127.0.0.1:8000/predict", json=input_data)
+    # # interact with FastAPI endpoint
+    # response = requests.post("http://127.0.0.1:8000/predict", json=input_data)
+    model = joblib.load(modelPath)
+
 
     target_names = ['Setosa', 'Versicolor', 'Virginica']
     if st.button("Predict"):
-        # make a post request to the FastAPI endpoint
-        prediction = int(response.json()[0])
-        pred_prob = response.json()[1]
+        # # make a post request to the FastAPI endpoint
+        # prediction = int(response.json()[0])
+        # pred_prob = response.json()[1]
 
-        # print results
+        # # print results
+        # st.write(f"Species predicted: {target_names[prediction]} with {pred_prob:.2f}% confidence")
+        prediction = model.predict([[sepal_length, sepal_width, petal_length, petal_width]])[0]
+        pred_prob = model.predict_proba([[sepal_length, sepal_width, petal_length, petal_width]]).max()*100
         st.write(f"Species predicted: {target_names[prediction]} with {pred_prob:.2f}% confidence")
-
     # We will plot how the train data clusters in 2D space and then see how the test data fits in it.
     # First apply PCA to reduce the dimensionality of the data to 2D
     X, y = load_data()

@@ -7,11 +7,15 @@ import seaborn as sns
 import matplotlib.pyplot as plt
 import io
 import requests
+import git
 
-# get the data from the /iris endpoint
-response = requests.get("http://127.0.0.1:8000/iris")
-data = response.json()
-df = pd.DataFrame(data)
+basePath = git.Repo('.', search_parent_directories=True).working_tree_dir
+dataPath = basePath + "/data/iris.csv"
+
+# # get the data from the /iris endpoint
+# response = requests.get("http://127.0.0.1:8000/iris")
+# data = response.json()
+df = pd.read_csv(dataPath)
 
 # Display options
 display_options = st.sidebar.selectbox("Display Options", ["Head", "Tail"])
