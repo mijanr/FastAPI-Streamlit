@@ -1,7 +1,6 @@
 # src/app.py
 import streamlit as st
 import pandas as pd
-from fastapi import HTTPException
 # welcome message
 st.title("Iris dataset explorer")
 st.write(
